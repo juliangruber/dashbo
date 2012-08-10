@@ -1,25 +1,36 @@
-
 /*
  * GET home page.
+ * GET graph page.
  */
 
-var graphs = [
-  { id: 0, url: '/images/graph.png' },
-  { id: 1, url: '/images/graph.png' },
-  { id: 2, url: '/images/graph.png' },
-  { id: 3, url: '/images/graph.png' },
-  { id: 4, url: '/images/graph.png' },
-  { id: 5, url: '/images/graph.png' }
-];
-
-// ZOOM
+/*
+ * Model
+ */
+var base = 'http://localhost:3000/images/graph.png';
 var zoom = {
   width: 300,
   height: 200
 }
+
+var graphs = [
+  { id: 0, url: '' },
+  { id: 1, url: '' },
+  { id: 2, url: '' },
+  { id: 3, url: '' },
+  { id: 4, url: '' },
+  { id: 5, url: '' }
+];
+
 for (graph in graphs) {
-  graphs[graph].url += '?width='+zoom.width+'&height='+zoom.height;
+  graphs[graph].url =
+    base+
+    graphs[graph].url+
+    '?width='+zoom.width+'&height='+zoom.height;
 }
+
+/*
+ * Routes
+ */
 
 exports.index = function(req, res) {
   res.render('index', { title: 'Dashbo', graphs: graphs, zoom: zoom });
