@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  for graph in graphs
+    a(href='/graph/#{graph.id}')
+      // todo: height goes after body which is too high
+      img(src=graph.url,width=zoom.width, height=zoom.height)
+  script(src='/javascripts/updater.js')
