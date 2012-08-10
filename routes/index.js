@@ -6,7 +6,7 @@
 /*
  * Model
  */
-var base = 'http://localhost:3000/images/graph.png';
+var base = process.env.GRAPHITE_URL || 'http://localhost:3000/images/graph.png';
 var zoom = {
   width: 300,
   height: 200

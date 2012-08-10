@@ -7,6 +7,8 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path');
+  
+console.log(process.env);
 
 var app = express();
 
