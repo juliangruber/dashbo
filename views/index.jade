@@ -8,6 +8,6 @@ block content
         a(href='/dashboards/#{dashboard.id}')= dashboard.name
   for graph in graphs
     a(class='graph',href='/graphs/#{graph.id}')
-      img(src=graph.url,width=zoom.width, height=zoom.height)
+      img(src=graph.url+'&width='+zoom.width+'&height='+zoom.height,width=zoom.width, height=zoom.height)
   script(src='/javascripts/updater.js')
   script(src='/javascripts/indicator.js')
