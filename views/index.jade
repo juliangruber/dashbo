@@ -8,7 +8,6 @@ block content
         a(href='/dashboards/#{dashboard.id}')= dashboard.name
   for graph in graphs
     a(class='graph',href='/graphs/#{graph.id}')
-      // todo: height goes after body which is too high
       img(src=graph.url,width=zoom.width, height=zoom.height)
   script(src='/javascripts/updater.js')
   script(src='/javascripts/indicator.js')
