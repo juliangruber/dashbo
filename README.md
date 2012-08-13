@@ -6,7 +6,7 @@ It is a simple dashboard system baked by `node.js` and `redis`.
 
 At the moment, adding and removing graphs is done by communicating with redis directly over `redis-cli`.
 
-* Add Dashboard: `sadd dashboards <id>|<name>`
+* Add Dashboard: `sadd dashboards '<id>|<name>'`
 * Add Graph to Dashboard: `set graph:<graphId>:url '<graphite-graph url (e.g. ?target=cpuUsage)>'` and `sadd dashboard:<id>:graphs <graphId>`
 
 Installation
