@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+a.graph {
+  position: relative;
+  float: left;
+}
+
+img {
+	padding: 5px;
+}
+
+span.indicator {
+  position: absolute;
+  height: 171px;
+  background-color: gray;
+  display: block;
+  width: 1px;
+  top: 5px;
+  right: 0px;
+  display: none;
+}

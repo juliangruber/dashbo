@@ -1,5 +1,10 @@
 ;(function() {
-  window.onload = maximize;
+
+  var oldOnLoad = window.onload;
+  window.onload = function() {
+    if (oldOnLoad) oldOnLoad();
+    maximize();
+  }
   
   window.onresize = (function() {
     var lastResize = Date.now();
